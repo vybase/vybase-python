@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "vybase"
+version = "0.1.0"
+description = "Vybase SDK for Python: verify user tokens, manage users, and call Vybase Auth."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["PyJWT[crypto]>=2.8"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["vybase"]
